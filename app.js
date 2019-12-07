@@ -76,22 +76,7 @@ function changeDestination() {
         <p>Добре для: Ніг, живота та верхньої частини стегон. Стоячи на місці, підніміть ногу перед вами й зігніть її у коліні на 90 градусів, обійміть ногу одночасно обома руками. Повторіть цю дію на іншій нозі. Зробіть це кілька разів (5 хвилин, 30 калорій).</p>
       </div>
     </div>    
-  </div>`;
-      break;
-    case '#create-workout':
-      main.innerHTML = 'Створення Тренування'
-      break;
-    case '#workout':
-      main.innerHTML = 'Тренування'
-      break;
-  }
-
-}
-
-window.onload = main;
-window.addEventListener("hashchange", changeDestination);
-
-
+  </div>`
 const li1 = document.querySelector('#firstExercise');
 const li2 = document.querySelector('#secondExercise');
 const li3 = document.querySelector('#thirdExercise');
@@ -229,3 +214,19 @@ li9.addEventListener('click', change9);
     div8.classList.remove("showExercise8");
     div2.classList.remove("showExercise2");
 }
+      break;
+    case '#create-workout':  
+        main.innerHTML = 'Створити тренування'
+        
+      break;
+    case '#workout':
+      main.innerHTML = 'Тренування'
+      break;
+  }
+
+}
+
+window.onload = main;
+window.addEventListener("hashchange", changeDestination);
+
+
