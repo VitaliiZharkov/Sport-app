@@ -13,7 +13,7 @@
 }
 
 h2 {
-  color: #386f70;
+  color: white;
   font-size: 30px;
   text-align: center;
 }
@@ -34,7 +34,6 @@ p {
 /* 
 *** Header ***
 */
-
 header nav {
   display: flex;
   background: cadetblue;
@@ -68,10 +67,11 @@ header nav a:target {
 */
 .exercise {
   border: 2px #60b6b7 solid;
-  height: 550px;
   width: 400px;
   padding: 0%;
   text-align: center;
+  top: 25px;
+  position: relative;
 }
 .exercise li {
   padding: 10px;
@@ -119,4 +119,9 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #60b6b7;
+  position: absolute;
+  top: 100px;
+  left: 940px;
 }
+
