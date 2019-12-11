@@ -8,6 +8,11 @@ const e3 = document.querySelector('#workout-c');
 
 const btn = document.querySelector('#btn');
 
+const exName = document.querySelector('#ex-name');
+const exDesc = document.querySelector('#ex-desc');
+
+
+
 function main() {
   if (!location.hash) {
     location.hash = '#list-of-exercises';
@@ -47,12 +52,29 @@ function addEX() {
     ex = [{ name: exName.value, desc: exDesc.value, id }]
   }
 
+
+  
   localStorage.setItem('ex', JSON.stringify(ex));
+  
+
+if(exDesc.value.length > 0) { 
+    btn.disabled = false; 
+} else { 
+    btn.disabled = true;
+};
+
 
   exName.value = null;
   exDesc.value= null;
+  btn.disabled = true;
+  
   drawList();
 }
+
+function textInput(value) {
+  btn.disabled = false; 
+}
+
 
 function delEx(id) {
   console.log('🔶 id', id);
