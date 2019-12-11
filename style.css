@@ -100,3 +100,62 @@ img {
   width: 40px;
   display: flex;
 }
+
+
+/*
+***********
+*/
+.name_label {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 30px;
+  color: #60b6b7;
+  margin: 10px;
+}
+.description {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 30px;
+  color: #60b6b7;
+  justify-content: space-around;
+  align-content: center;
+  padding: 10px;
+}
+.exercises-ds {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  resize: none;
+  color: chocolate;
+  font-size: 15px;
+  padding: 10px;
+}
+.exercises-name {
+  width: 100%;
+  height: 50px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+
+  color: chocolate;
+  font-size: 15px;
+}
+.add-btn {
+  background-color: #60b6b7;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  cursor: pointer;
+  width: 280px;
+  height: 50px;
+  font-size: 20px;
+  margin-left: 10px;
+}
+.add-btn:hover {
+  background-color: chocolate;
+}
