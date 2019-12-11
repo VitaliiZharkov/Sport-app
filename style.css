@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+:root {
+  --color: #333;
+  --color-light-grey: #858585;
+  --border: 1px solid #c2c2c2;
+}
+
+h2 {
+  color: black;
+  font-size: 30px;
+  text-align: center;
+}
+p {
+  width: 500px;
+  font-size: 20px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+/* 
+*** Flex ***
+*/
+.flex {
+  display: flex;
+}
+.flex-d-c {
+  flex-direction: column;
+}
+/* 
+*** Header ***
+*/
+header nav {
+  display: flex;
+  background: cadetblue;
+}
+
+header nav a {
+  text-decoration: none;
+  font-size: 1em;
+  padding: 0.5em 1em;
+  color: antiquewhite;
+  flex-basis: 50%;
+}
+
+header nav a:not(:last-child) {
+  border-right: var(--border);
+}
+
+header nav a:hover,
+header nav a:focus,
+header nav a:target {
+  background: chocolate;
+}
+
+.main {
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+}
+/*
+*** Exercises ***
+*/
+.exercise {
+  border: 2px #60b6b7 solid;
+  width: 400px;
+  padding: 0%;
+  text-align: center;
+  top: 25px;
+  position: relative;
+}
+.exercise li {
+  padding: 10px;
+  font-size: 25px;
+  border-bottom: 0.5px #60b6b7 solid;
+  list-style-type: none;
+  margin: 0px;
+}    
+
+.exercise li:hover {
+  background-color:#60b6b7; 
+  cursor: pointer;
+  border-bottom: 5px solid chocolate;
+}
+img {
+  height: 300px;
+  width: 450px;
+}
+.container {
+  width: 100%;
+}
+
+.close {
+  color: red;
+  font-size: 24px;
+  width: 40px;
+  display: flex;
+}
