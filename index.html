@@ -20,13 +20,13 @@
       <form class="flex flex-d-c">
         <label class="name_label flex flex-d-c">
           Назва вправи
-          <input type="text" id="ex-name" class="exercises-name">
+          <input type="text" id="ex-name" class="exercises-name" onchange="textInput()">
         </label>
         <label class="description flex flex-d-c">
           Опис
-          <textarea id="ex-desc" class="exercises-ds"cols="20" rows="5"></textarea>
+          <textarea id="ex-desc" class="exercises-ds" onchange="textInput()" cols="20" rows="5"></textarea>
         </label>
-        <button id="btn" class="add-btn">Додати</button>
+        <button id="btn" disabled="disabled" class="add-btn">Додати</button>
       </form>
       <ul id="ex-list" class="exercise"></ul>
     </section>
