@@ -91,12 +91,28 @@ function drawList() {
   let ex = JSON.parse(localStorage.getItem('ex'));
 
   if (ex) {
-    const list = ex.map(el => `<li><i onClick="delEx(${el.id})" class="close">&times;</i><h2>${el.name}</h2><p>${el.desc}</p></li>`).join('');
+    const list = ex.map(el => 
+    `<li>
+    <h2>${el.name}</h2>
+    <button class="accordion">&#43;</button>
+    <p>${el.desc}</p>
+    <i class="close" data-title="Delete" onClick="delEx(${el.id})">&times;</i>
+    </li>`).join('');
 
     exList.innerHTML = list;
-
+    clickAdd();
 
   } else {
     exList.innerHTML = 'No exercise';
   }
 }
+
+function clickAdd(){
+  let buttons = document.querySelectorAll('.accordion');
+
+  buttons.forEach(btn => btn.addEventListener('click', (e) => {
+  
+    btn.classList.toggle('active')
+  }));
+
+ }
