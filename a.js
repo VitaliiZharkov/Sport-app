@@ -53,6 +53,14 @@ function addEX() {
   exDesc.value= null;
   drawList();
 }
+function confirmMessage(id) {
+  if (confirm("Do you want to delete exercise?")) {
+    delEx(id);
+  } else {
+      alert("Exercise wasn't deleted")
+  }
+}
+
 
 function delEx(id) {
   console.log('🔶 id', id);
@@ -61,20 +69,17 @@ function delEx(id) {
 
   localStorage.setItem('ex', JSON.stringify(newEx));
   drawList();
-}
-
+} 
 function drawList() {
   const exList = document.querySelector('#ex-list');
 
   let ex = JSON.parse(localStorage.getItem('ex'));
 
   if (ex) {
-    const list = ex.map(el => `<li><i onClick="delEx(${el.id})" class="close">&times;</i><h2>${el.name}</h2><p>${el.desc}</p></li>`).join('');
+    const list = ex.map(el => `<li><i  onClick="confirmMessage(${el.id})" class="close">&times;</i><h2>${el.name}</h2><p>${el.desc}</p></li>`).join('');
 
     exList.innerHTML = list;
-
-
   } else {
     exList.innerHTML = 'No exercise';
   }
-}
+}  
